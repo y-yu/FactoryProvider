@@ -48,7 +48,7 @@ extension Optional: Providable where Wrapped: Providable, Wrapped.S == Int {
                 if (s % 2 == 0) {
                     return Wrapped.provide().map { w -> Optional<Wrapped> in .some(w) }.run(s)
                 } else {
-                    return (.none, s)
+                    return (.none, s + 1)
                 }
         }
     }
